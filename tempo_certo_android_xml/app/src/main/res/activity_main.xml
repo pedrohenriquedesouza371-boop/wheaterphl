@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/navy">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_screen"
+        android:clipToOutline="true"
+        android:paddingBottom="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:background="@drawable/bg_button"
+                android:text="☼"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:contentDescription="Tempo Certo" />
+
+            <TextView
+                android:id="@+id/tvBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/app_name"
+                android:textColor="@color/navy"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="auto"
+                android:background="@drawable/bg_blue_stat"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="BR"
+                android:textColor="@color/blue"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Hero illustration -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_white_card"
+            android:src="@drawable/weather_illustration"
+            android:clipToOutline="true"
+            android:contentDescription="Ilustração do clima" />
+
+        <!-- Intro -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/intro_title"
+                android:textAlignment="center"
+                android:textColor="@color/navy"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/intro_subtitle"
+                android:textAlignment="center"
+                android:textColor="@color/slate"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- CEP -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_input"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="⌖"
+                android:textColor="@color/slate"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etCep"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/cep_hint"
+                android:inputType="number"
+                android:maxLength="9"
+                android:paddingStart="8dp"
+                android:textColor="@color/slate"
+                android:textColorHint="@color/slate"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:textColor="@color/blue"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConsultar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/consult"
+            android:textColor="@color/navy"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/orange"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_media_next"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/navy" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/satellite_note"
+            android:textAlignment="center"
+            android:textColor="@color/slate"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="134dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_home_indicator" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

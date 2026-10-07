@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tempo Certo</string>
+    <string name="cep_hint">01001-000</string>
+    <string name="search">BUSCAR</string>
+    <string name="consult">Consultar Previsão</string>
+    <string name="intro_title">Qual o clima na sua região?</string>
+    <string name="intro_subtitle">Descubra a previsão do tempo em tempo real de forma simples e rápida.</string>
+    <string name="satellite_note">Previsão baseada em dados de satélite</string>
+    <string name="city">São Paulo, SP</string>
+    <string name="cep">CEP: 01001-000</string>
+    <string name="now">Agora</string>
+    <string name="temperature">24°C</string>
+    <string name="condition">Parcialmente Nublado</string>
+    <string name="humidity">Umidade</string>
+    <string name="humidity_value">68%%</string>
+    <string name="wind">Vento</string>
+    <string name="wind_value">12 km/h</string>
+    <string name="feels_like">Sensação</string>
+    <string name="feels_value">26°C</string>
+    <string name="next_days">Próximos dias</string>
+    <string name="see_all">Ver tudo</string>
+    <string name="updated">Última atualização: 14:30</string>
+</resources>

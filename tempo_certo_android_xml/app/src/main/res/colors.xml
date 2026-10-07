@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy">#0F172A</color>
+    <color name="slate">#475569</color>
+    <color name="blue">#0284C7</color>
+    <color name="orange">#F59E0B</color>
+    <color name="surface">#F8FAFC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="border">#CBD5E1</color>
+    <color name="sky_start">#E0F2FE</color>
+    <color name="sky_mid">#F0F9FF</color>
+</resources>

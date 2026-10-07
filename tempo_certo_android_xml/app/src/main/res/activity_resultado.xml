@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/navy">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_screen"
+        android:clipToOutline="true"
+        android:paddingBottom="12dp">
+
+        <!-- Location header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_white_card"
+                android:src="@android:drawable/ic_media_previous"
+                android:contentDescription="Voltar" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city"
+                    android:textColor="@color/navy"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cep"
+                    android:textColor="@color/slate"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnRefresh"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_white_card"
+                android:src="@android:drawable/ic_popup_sync"
+                android:contentDescription="Atualizar previsão" />
+        </LinearLayout>
+
+        <!-- Current weather -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/weather_card_illustration"
+                android:contentDescription="Condição atual do tempo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:background="@drawable/bg_white_card"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/now"
+                android:textColor="@color/blue"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTemperatura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temperature"
+                    android:textColor="@color/white"
+                    android:textSize="64sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCondicao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/condition"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Quick stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:padding="12dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_card">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💧 Umidade" android:textColor="@color/slate" android:textSize="11sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="@string/humidity_value" android:textColor="@color/navy" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:padding="12dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_card">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="≋ Vento" android:textColor="@color/slate" android:textSize="11sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="@string/wind_value" android:textColor="@color/navy" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:padding="12dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_blue_stat">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="♨ Sensação" android:textColor="@color/slate" android:textSize="11sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="@string/feels_value" android:textColor="@color/navy" android:textSize="16sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Forecast header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/next_days"
+                android:textColor="@color/navy"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:textColor="@color/blue"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Forecast rows -->
+        <LinearLayout
+            android:id="@+id/forecastList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_forecast"
+                android:id="@+id/dayMonday" />
+            <include layout="@layout/item_forecast"
+                android:id="@+id/dayTuesday" />
+            <include layout="@layout/item_forecast"
+                android:id="@+id/dayWednesday" />
+            <include layout="@layout/item_forecast"
+                android:id="@+id/dayThursday" />
+            <include layout="@layout/item_forecast"
+                android:id="@+id/dayFriday" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/updated"
+            android:textAlignment="center"
+            android:textColor="@color/slate"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="134dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_home_indicator" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
